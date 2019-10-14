@@ -1,0 +1,37 @@
+@import 'var';
+@import 'components';
+@import 'mixins';
+.container{
+  widht:80%;
+  background-color: #eee;
+  margin: 0 auto;
+  padding: 10px;
+  section{
+    background-color: #ee89aa;
+    h2{
+      text-align: center;
+      padding: 15px;
+      @include coolBorder(20px, dotted);
+    }
+    ul{
+      li{
+        list-style: none;
+        background-color: #ee99ff;
+        border-top: 1px solid $borderColor;
+        a{
+          color: #000;
+          text-transform: uppercase;
+          &:hover{
+            color: lighten($linkColor, 30%);
+        }
+      }
+      span{
+        text-align: right;
+        background-color: #000;
+        color: #fff;
+        @extend .button;
+      }
+    }
+  }
+}
+}
